@@ -1,0 +1,14 @@
+
+tcpproxy:
+功能: 实现TCP连接的中转.即开一个TCP端口,将所有连接进来的连接都转连配置中的服务器.实现双方通信中转.
+      可用于截获取分析一些TCP协议通信程序的数据进行分析.
+程序配置:
+
+[public]
+listen_port=7780
+server_ip=192.168.5.86
+server_port=80
+is_writelog=1
+is_writeseq=0
+
+即接收7780的连接,再主动连server_ip去.转送两端数据.并保存下来.

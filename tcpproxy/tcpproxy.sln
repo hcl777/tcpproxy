@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tcpproxy", "src\tcpproxy\tcpproxy.vcxproj", "{DD155B3D-0823-4F44-86BB-114C139AB93E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcomm", "..\comm\src\libcomm\libcomm.vcxproj", "{A377E48A-3EBF-49E6-8554-B4415971F335}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD155B3D-0823-4F44-86BB-114C139AB93E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DD155B3D-0823-4F44-86BB-114C139AB93E}.Debug|Win32.Build.0 = Debug|Win32
+		{DD155B3D-0823-4F44-86BB-114C139AB93E}.Release|Win32.ActiveCfg = Release|Win32
+		{DD155B3D-0823-4F44-86BB-114C139AB93E}.Release|Win32.Build.0 = Release|Win32
+		{A377E48A-3EBF-49E6-8554-B4415971F335}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A377E48A-3EBF-49E6-8554-B4415971F335}.Debug|Win32.Build.0 = Debug|Win32
+		{A377E48A-3EBF-49E6-8554-B4415971F335}.Release|Win32.ActiveCfg = Release|Win32
+		{A377E48A-3EBF-49E6-8554-B4415971F335}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

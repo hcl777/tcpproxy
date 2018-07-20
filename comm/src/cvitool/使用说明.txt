@@ -1,0 +1,54 @@
+
+
+。--cover
+cvitool --cover 表示压缩信息文件是同名的会覆盖
+
+1.生成CVI:
+cvitool --cvi ./film/test.rm ./film/test.rm.cvi
+cvitool --scvi ./film/test7.rm ./film/test7.scvi
+
+1.1.批处理生成CVI
+cvitool --cvidir ./film/
+
+2.反CVI:
+cvitool --uncvi ./film/test.rm.cvi ./film/test2.rm
+cvitool --unscvi ./film/test7.scvi ./film/test7.rm
+ 
+3.sha1:
+cvitool --sha1 ./film/test.rm.cvi
+ 
+4.添加压缩文件
+(linux 命令不支持|分隔,linux命令保留了|的使用,改用??分隔)
+cvitool --eif ./film/test.rm.cvi ./film/3.jpg::1??./film/水.jpg::1??./film/testxml.txt::2
+
+4.1.批处理添加压缩文件(将目录下面的所有cvi文件进行处理，cvi的信息文件被放在与cvi文件相同名字的目录中)
+cvitool --eifdir ./film/
+
+4.2.批处理加密和添加eif文件(第一个参数指定文本，第二个参数指定CVI输出目录,第三个参数指定如果未加密的文件将加密成什么类型文件2:rdb,非2:rdbs)
+注:
+文本格式:每行一个cvi信息记录,一个CVI记录由1个电影文件路径和多个附加文件路径组成,用"|"分隔.第一个路径为电影路径
+cvitool --eiftxt ./eiftxt.txt ./cvi 3
+
+5.查看eif
+cvitool -i ./film/test.rm.cvi
+
+6.解压
+cvitool --uneif ./film/test.rm.cvi ./film/info/
+
+
+7.解压指定文件
+cvitool --uneifi ./film/test.rm.cvi  水.jpg ./film/test/
+
+8.批量解压
+cvitool --uneifdir ./cvi/
+cvitool --uneiftxt_dir ./uneiftxt_dir.txt
+(uneiftxt_dir.txt文件为每行一个目录，只扫描本层目录)
+(注: 如果不带参数执行程序，默认执行"cvitool --uneiftxt_dir ./uneiftxt_dir.txt"功能)
+
+9.单个CVI文件清理所有EIF信息
+cvitool --eifclean ./film/test.rm.cvi
+
+10.批量清理civ文件的eif信息
+cvitool --eifcleantxt ./film/eifclean.txt
+(eifclean.txt的每行为一个cvi路径)
+
